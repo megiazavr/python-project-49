@@ -1,14 +1,16 @@
 [tool.poetry]
-name = "your_project_name"
+name = "hexlet-code"
 version = "0.1.0"
-description = "Your project description"
-authors = ["Your Name <your.email@example.com>"]
+description = ""
+authors = ["Milena Egiaze"]
+readme = "README.md"
 packages = [
 { include = "brain_games" },
 ]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+prompt = "^0.4.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
