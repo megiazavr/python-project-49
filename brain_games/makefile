@@ -20,3 +20,5 @@ brain-gcd:
 	python3 brain_gcd.py
 brain-progression:
 	python3 brain_progression.py
+brain-prime:
+	python3 brain_prime.py
