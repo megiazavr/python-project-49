@@ -18,3 +18,5 @@ brain-calc:
 	python3 brain_calc.py
 brain-gcd:
 	python3 brain_gcd.py
+brain-progression:
+	python3 brain_progression.py
