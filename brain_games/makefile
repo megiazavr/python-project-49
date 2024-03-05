@@ -12,3 +12,5 @@ publish:
 
 package-install:
 	python3 -m pip install --user dist/*.whl
+brain-even:
+	python3 brain_even.py.save
