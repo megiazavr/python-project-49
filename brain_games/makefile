@@ -16,3 +16,5 @@ brain-even:
 	python3 brain_even.py.save
 brain-calc:
 	python3 brain_calc.py
+brain-gcd:
+	python3 brain_gcd.py
