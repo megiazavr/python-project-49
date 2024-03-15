@@ -1,3 +1,7 @@
+<a href="https://codeclimate.com/github/megiazavr/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/ec03d61f635777397939/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/megiazavr/python-project-49/test_coverage"><img src="https://api.codeclimate.com/v1/badges/ec03d61f635777397939/test_coverage" /></a>
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/megiazavr/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/megiazavr/python-project-49/actions)
 https://asciinema.org/a/z1JVwvScDrGMktPUs5syqo7Yo - brain-even
