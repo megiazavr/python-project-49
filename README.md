@@ -5,7 +5,6 @@
 ### Hexlet tests and linter status:
 brain-even
 <asciinema-player src="https://asciinema.org/a/z1JVwvScDrGMktPUs5syqo7Yo" cols="120" rows="30"></asciinema-player>
-https://asciinema.org/a/z1JVwvScDrGMktPUs5syqo7Yo - brain-even
 
 brain-calc
 <asciinema-player src="https://asciinema.org/a/3STUm6BwDsl7AiGo5t9jZefWL" cols="120" rows="30"></asciinema-player>
