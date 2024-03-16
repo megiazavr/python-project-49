@@ -1,5 +1,9 @@
 .venv/
 dist/
-setup.cfg
-__pycache__
-.idea
+setup.cfg/
+__pycache__/
+.idea/
+workflows/
+.local/bin/
+.poetry.venv/
+.DS_Store/
