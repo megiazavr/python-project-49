@@ -1,21 +1,61 @@
-<a href="https://codeclimate.com/github/megiazavr/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/ec03d61f635777397939/maintainability" /></a>
+Brain Games — первый проект на курсе Hexlet: Python-разработчик. Проект 
+включает в себя 7 консольных игр.
 
-<a href="https://codeclimate.com/github/megiazavr/python-project-49/test_coverage"><img src="https://api.codeclimate.com/v1/badges/ec03d61f635777397939/test_coverage" /></a>
+Инструкция по установке:
 
-### Hexlet tests and linter status:
-<<<<<<< HEAD
-brain-even
-<asciinema-player src="https://asciinema.org/a/z1JVwvScDrGMktPUs5syqo7Yo" cols="120" rows="30"></asciinema-player>
+1. Cборка проекта
 
-brain-calc
-<asciinema-player src="https://asciinema.org/a/3STUm6BwDsl7AiGo5t9jZefWL" cols="120" rows="30"></asciinema-player>
+        make build
 
-brain-gcd
-<asciinema-player src="https://asciinema.org/a/BEVT0x9oBZYHJtHqmhFi8v8P6" cols="120" rows="30"></asciinema-player>
+2. Установка пакетов
 
-brain-progression
-<asciinema-player src="https://asciinema.org/a/NH1vk3i0N85iA4KiJRD3Zn2i2" cols="120" rows="30"></asciinema-player>
+        make package-install
 
-brain-prime
-<asciinema-player src="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN" cols="120" rows="30"></asciinema-player>
+3. Запуск необходимой игры
 
+        # Выводит приветствие
+        brain-game
+        # Игра: "Проверка на чётность" 
+        brain-even
+        # Игра: "Калькулятор"
+        brain-calc
+        # Игра: "Наибольший общий делитель"
+        brain-gcd
+        # Игра "Арифметическая прогрессия"
+        brain-progression
+        # Игра "Простое ли число?"
+        brain-prime
+
+
+<a 
+href="https://codeclimate.com/github/megiazavr/python-project-49/maintainability"><img 
+src="https://api.codeclimate.com/v1/badges/ec03d61f635777397939/maintainability" 
+/></a>
+
+
+# Аскинемы отдельных игр
+
+### Игра: brain-even
+<asciinema-player 
+src="https://asciinema.org/a/z1JVwvScDrGMktPUs5syqo7Yo"><img 
+src=="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
+
+### Игра: brain-calc
+<asciinema-player 
+src="https://asciinema.org/a/3STUm6BwDsl7AiGo5t9jZefWL"><img 
+src=="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
+
+### Игра: brain-gcd
+<asciinema-player 
+src="https://asciinema.org/a/BEVT0x9oBZYHJtHqmhFi8v8P6"><img 
+src=="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
+
+### Игра: brain-progression
+<asciinema-player 
+src="https://asciinema.org/a/NH1vk3i0N85iA4KiJRD3Zn2i2"><img 
+src=="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
+
+### Игра: brain-prime
+<asciinema-player 
+src="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"><img 
+src="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
