@@ -5,5 +5,4 @@ __pycache__/
 .idea/
 workflows/
 .local/bin/
-.poetry.venv/
-.DS_Store/
+
