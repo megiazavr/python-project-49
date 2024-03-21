@@ -1,6 +1,8 @@
 from random import randint
 import prompt
 
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
+
 def main():
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
