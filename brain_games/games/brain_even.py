@@ -36,7 +36,7 @@ def main():
 
     print(f"Congratulations, {name}!")
 
-def generate_question() -> str:
+def generate_question_answer() -> str:
     '''Generate random integer number and return it
     as a string'''
     return str(randint(1, 100))
