@@ -1,6 +1,6 @@
 #!/usr/bin/env/ python3
-import brain_games.games import brain_even
-import brain_games.engine import engine
+from brain_games.games import brain_even
+from brain_games.engine import engine
 
 
 def main():
