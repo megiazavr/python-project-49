@@ -1,3 +1,9 @@
+from types import ModuleType
+import prompt
+
+
+ROUNDS = 3
+
 def greet_user_and_get_user_name(game_rule: str) -> str:
     print('Welcome to the Brain Games!')
     user_name = prompt.string("May I have your name? ")
