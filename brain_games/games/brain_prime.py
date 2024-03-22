@@ -1,45 +1,21 @@
-import random
-import prompt
-import math
+from random import randint
 
-DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-def is_prime(number):
-    """Check if a number is prime."""
-    if number < 2:
-        return False
-    for i in range(2, int(math.sqrt(number)) + 1):
+DESCRIPTION = 'Answer "yes" if given number is prime. 
+Otherwise answer "no".'
+
+
+def generate_question() -> str:
+    '''Generate random integer number and
+    return it as a string object'''
+    return str(randint(1, 99))
+
+
+def get_correct_answer(question: int) -> str:
+    '''Take integer number as a string and return "yes"
+    if number is prime or "no" if not'''
+    number = int(question)
+    for i in range(2, int(number // 2) + 1):
         if number % i == 0:
-            return False
-    return True
-
-def generate_question():
-    """Generate a random number and check if it's prime."""
-    number = random.randint(2, 100)
-    question = str(number)
-    correct_answer = 'yes' if is_prime(number) else 'no'
-    return question, correct_answer
-
-def main():
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print(DESCRIPTION)
-
-    for _ in range(3):
-        question, correct_answer = generate_question()
-        print(f"Question: {question}")
-        user_answer = prompt.string("Your answer: ")
-
-        if user_answer != correct_answer:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}!")
-            return
-
-        print("Correct!")
-
-    print(f"Congratulations, {name}!")
-
-if __name__ == "__main__":
-    main()
-
+            return 'no'
+    return 'no' if number == 1 else 'yes'

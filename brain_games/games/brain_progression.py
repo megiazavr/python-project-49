@@ -1,39 +1,30 @@
-import random
-import prompt
+from random import randint, randrange
+
 
 DESCRIPTION = 'What number is missing in the progression?'
 
-def generate_progression():
-    """Generate arithmetic progression with a missing number."""
-    start = random.randint(1, 20)
-    step = random.randint(1, 5)
-    length = random.randint(5, 10)
-    progression = [str(start + i * step) for i in range(length)]
-    hidden_index = random.randint(0, length - 1)
-    correct_answer = progression[hidden_index]
-    progression[hidden_index] = '..'
-    question = ' '.join(progression)
-    return question, correct_answer
 
-def main():
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print(DESCRIPTION)
+def generate_question() -> str:
+    '''Generate arithmetic progression with one lost number
+    and return it as a string'''
+    start, step, length = randint(1, 50), randint(1, 10), 
+randint(5, 10)
+    progression = list(range(start, start + step * length, 
+step))
+    progression[randrange(length)] = '..'
+    return ' '.join(str(x) for x in progression)
 
-    for _ in range(3):
-        question, correct_answer = generate_progression()
-        print(f"Question: {question}")
-        user_answer = prompt.string("Your answer: ")
 
-        if user_answer != correct_answer:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}!")
-            return
-
-        print("Correct!")
-
-    print(f"Congratulations, {name}!")
-
-if __name__ == "__main__":
-    main()
+def get_correct_answer(question: str) -> str:
+    '''Take ariphmetic progression of integer numbers 
+splitted by
+    spaces, find and return the lost number as a string'''
+    numbers = question.split()
+    i = numbers.index('..')
+    if i >= 2:
+        lost_num = 2 * int(numbers[i - 1]) - int(numbers[i - 
+2])
+    else:
+        lost_num = 2 * int(numbers[i + 1]) - int(numbers[i + 
+2])
+    return str(lost_num)

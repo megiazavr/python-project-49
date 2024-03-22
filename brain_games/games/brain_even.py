@@ -1,17 +1,18 @@
-import random
-
-DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
+from random import randint
 
 
-def generate_question_answer():
-    num = random.randint(1, 100)
-    question = f'Question: {num}'
-    if is_even(num):
-        answer = 'yes'
-    else:
-        answer = 'no'
-    return (question, answer)
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise 
+answer "no".'
 
 
-def is_even(num):
-    return num % 2 == 0
+def generate_question() -> str:
+    '''Generate random integer number and return it
+    as a string'''
+    return str(randint(1, 100))
+
+
+def get_correct_answer(question: str) -> str:
+    '''Take integer number as a string and return string 
+'yes'
+    if the number is even, otherwise string 'no' if odd'''
+    return 'no' if int(question) % 2 else 'yes'

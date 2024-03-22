@@ -1,43 +1,20 @@
-import random
-import math
-import prompt
+from random import randint
+from math import gcd
 
-DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
-def gcd(a, b):
-    """Функция для вычисления НОДа двух чисел."""
-    while b:
-        a, b = b, a % b
-    return a
+DESCRIPTION = 'Find the greatest common divisor of given 
+numbers.'
 
-def generate_question():
-    """Генерация вопроса и правильного ответа."""
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
-    question = f"{num1} {num2}"
-    correct_answer = str(gcd(num1, num2))
-    return question, correct_answer
 
-def main():
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print(DESCRIPTION)
+def generate_question() -> str:
+    '''Generate 2 random integers and return it
+    splitted with space as a string'''
+    num_1, num_2 = randint(1, 100), randint(1, 100)
+    return f'{num_1} {num_2}'
 
-    for _ in range(3):
-        question, correct_answer = generate_question()
-        print(f"Question: {question}")
-        user_answer = prompt.string("Your answer: ")
 
-        if user_answer != correct_answer:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}!")
-            return
-
-        print("Correct!")
-
-    print(f"Congratulations, {name}!")
-
-if __name__ == "__main__":
-    main()
-
+def get_correct_answer(question: str) -> str:
+    '''Take two integers as a string and return their
+    greatest common divisor as a string'''
+    num_1, num_2 = map(int, question.split())
+    return str(gcd(num_1, num_2))
