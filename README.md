@@ -1,3 +1,12 @@
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ec03d61f635777397939/test_coverage)](https://codeclimate.com/github/megiazavr/python-project-49/test_coverage) 
+
+<a
+href="https://codeclimate.com/github/megiazavr/python-project-49/maintainability"><img
+src="https://api.codeclimate.com/v1/badges/ec03d61f635777397939/maintainability"
+/></a>
+
+[![Actions Status](https://github.com/megiazavr/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/megiazavr/python-project-49/actions)
+
 Brain Games — первый проект на курсе Hexlet: Python-разработчик. Проект 
 включает в себя 7 консольных игр.
 
@@ -25,13 +34,6 @@ Brain Games — первый проект на курсе Hexlet: Python-раз�
         brain-progression
         # Игра "Простое ли число?"
         brain-prime
-
-
-<a 
-href="https://codeclimate.com/github/megiazavr/python-project-49/maintainability"><img 
-src="https://api.codeclimate.com/v1/badges/ec03d61f635777397939/maintainability" 
-/></a>
-
 
 # Аскинемы отдельных игр
 
