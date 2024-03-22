@@ -1,4 +1,4 @@
-
+from random import randint
 
 game_rule = 'What number is missing in the progression?'
 
