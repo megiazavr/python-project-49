@@ -1,30 +1,23 @@
-from random import randint, randrange
 
 
-DESCRIPTION = 'What number is missing in the progression?'
+game_rule = 'What number is missing in the progression?'
 
 
-def generate_question() -> str:
-    '''Generate arithmetic progression with one lost number
-    and return it as a string'''
-    start, step, length = randint(1, 50), randint(1, 10), 
-randint(5, 10)
-    progression = list(range(start, start + step * length, 
-step))
-    progression[randrange(length)] = '..'
-    return ' '.join(str(x) for x in progression)
+def get_question_and_answer() -> tuple[str, str]:
+    progression, length = get_progression()
+
+    hide_char_index = randint(0, length - 1)
+    right_answer = str(progression[hide_char_index])
+    progression[hide_char_index] = '..'
+
+    question = " ".join(map(str, progression))
+    return question, right_answer
 
 
-def get_correct_answer(question: str) -> str:
-    '''Take ariphmetic progression of integer numbers 
-splitted by
-    spaces, find and return the lost number as a string'''
-    numbers = question.split()
-    i = numbers.index('..')
-    if i >= 2:
-        lost_num = 2 * int(numbers[i - 1]) - int(numbers[i - 
-2])
-    else:
-        lost_num = 2 * int(numbers[i + 1]) - int(numbers[i + 
-2])
-    return str(lost_num)
+def get_progression() -> tuple[list, int]:
+    length = randint(5, 11)
+    start = randint(1, 20)
+    step = randint(2, 6)
+    stop = start + (length * step)
+    progression = list(range(start, stop, step))
+    return progression, length

@@ -1,20 +1,20 @@
 from random import randint
-from math import gcd
 
 
-DESCRIPTION = 'Find the greatest common divisor of given 
-numbers.'
+game_rule = 'Find the greatest common divisor of given numbers.'
 
 
-def generate_question() -> str:
-    '''Generate 2 random integers and return it
-    splitted with space as a string'''
-    num_1, num_2 = randint(1, 100), randint(1, 100)
-    return f'{num_1} {num_2}'
+def get_question_and_answer() -> tuple[str, int]:
+    num1 = randint(1, 25)
+    num2 = randint(1, 25)
+    right_answer = get_gcd(num1, num2)
+    question = f'{num1} {num2}'
+    return question, right_answer
 
 
-def get_correct_answer(question: str) -> str:
-    '''Take two integers as a string and return their
-    greatest common divisor as a string'''
-    num_1, num_2 = map(int, question.split())
-    return str(gcd(num_1, num_2))
+def get_gcd(num1: int, num2: int) -> int:
+    if num1 < num2:
+        num1, num2 = num2, num1
+    while num2 != 0:
+        num1, num2 = num2, num1 % num2
+    return num1
