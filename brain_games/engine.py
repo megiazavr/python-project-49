@@ -1,26 +1,29 @@
-import brain_games.cli
+def greet_user_and_get_user_name(game_rule: str) -> str:
+    print('Welcome to the Brain Games!')
+    user_name = prompt.string("May I have your name? ")
+    print(f'Hello, {user_name}!')
+    print(game_rule)
+    return user_name
 
 
-ANSWERS_TO_COMPLETE = 3
+def show_question_get_user_answer(question: str) -> str:
+    print(f'Question: {question}')
+    answer = prompt.string('Your answer: ')
+    return answer
 
 
-def run_game(game_module, cli_module=brain_games.cli) -> None:
-    '''Take the game resources module and run the game'''
-    user = cli_module.welcome_user()
-    print(game_module.DESCRIPTION)
-    answers_left = ANSWERS_TO_COMPLETE  # the required number of correct answers
-    while answers_left > 0:
-        question = game_module.generate_question()
-        print(f'Question: {question}')
-        correct_answer = game_module.get_correct_answer(question)
-        user_answer = cli_module.get_user_answer()
-        if user_answer == correct_answer:
-            answers_left -= 1
+def start_game(game: ModuleType) -> None:
+    game_rule = game.game_rule
+    user_name = greet_user_and_get_user_name(game_rule)
+    for _ in range(ROUNDS):
+        question, right_answer = game.get_question_and_answer()
+        user_answer = show_question_get_user_answer(question)
+        if user_answer == str(right_answer):
             print('Correct!')
         else:
-            print(f"'{user_answer}' is wrong answer ;(.", end=' ')
-            print(f"Correct answer was '{correct_answer}'.")
-            cli_module.say_game_over(user)
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{right_answer}'.")
+            print(f"Let's try again, {user_name}!")
             break
     else:
-        cli_module.say_well_done(user)
+        print(f'Congratulations, {user_name}!')
