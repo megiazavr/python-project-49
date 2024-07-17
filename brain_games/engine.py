@@ -3,7 +3,7 @@ import prompt
 
 ROUNDS = 3
 
-def start_game(game: ModuleType) -> None:
+def play_game(game: ModuleType) -> None:
     print('Welcome to the Brain Games!')
     user_name = prompt.string("May I have your name? ")
     print(f'Hello, {user_name}!')
