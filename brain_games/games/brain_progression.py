@@ -2,6 +2,16 @@ from random import randint
 
 game_rule = 'What number is missing in the progression?'
 
+from random import randint
+
+GAME_RULE = 'What number is missing in the progression?'
+MIN_PROGRESSION_LENGTH = 5
+MAX_PROGRESSION_LENGTH = 11
+MIN_START = 1
+MAX_START = 20
+MIN_STEP = 2
+MAX_STEP = 6
+
 def get_question_and_answer() -> tuple[str, str]:
     progression = generate_progression()
     question, right_answer = hide_element_in_progression(progression)
