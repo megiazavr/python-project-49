@@ -1,5 +1,5 @@
 from brain_games.games import brain_gcd
-from brain_games.engine import start_game
+from brain_games.engine import play_game
 
 
 def main():
