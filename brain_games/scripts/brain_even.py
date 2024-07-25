@@ -1,4 +1,4 @@
-from brain_games.brain_games import even
+from brain_games.games import even
 from brain_games.brain_engine import play_game
 
 
