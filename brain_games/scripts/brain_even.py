@@ -1,5 +1,5 @@
 from brain_games.games import even
-from brain_games.engine import play_game
+from brain_games import play_game
 
 
 def main():
