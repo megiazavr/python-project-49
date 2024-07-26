@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
