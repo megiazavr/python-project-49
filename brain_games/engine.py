@@ -1,26 +1,20 @@
-from types import ModuleType
 import prompt
+from brain_games.constants import ROUNDS_COUNT
 
-ROUNDS = 3
 
-def play_game(game: ModuleType) -> None:
+def play(game):
     print('Welcome to the Brain Games!')
-    user_name = prompt.string("May I have your name? ")
-    print(f'Hello, {user_name}!')
-    print(game.game_rule)
-    
-    for _ in range(ROUNDS):
-        question, right_answer = game.get_question_and_answer()
-        print(f'Question: {question}')
-        user_answer = prompt.string('Your answer: ')
-        
-        if user_answer == str(right_answer):
-            print('Correct!')
-        else:
-            print(f"'{user_answer}' is wrong answer ;(. "
-                  f"Correct answer was '{right_answer}'.")
-            print(f"Let's try again, {user_name}!")
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    print(game.DESCRIPTION)
+    for _ in range(ROUNDS_COUNT):
+        question, right = game.generate_round_data()
+	print(f'Question: {question}')
+        answ = prompt.string('Your answer: ')
+        if answ != right:
+            print(f"'{answ}' is wrong answer ;(. Correct answer was '{right}'.")
+            print(f"Let's try again, {name}!")
             break
+        print('Correct!')
     else:
-        print(f'Congratulations, {user_name}!')
-
+        print(f'Congratulations, {name}!')

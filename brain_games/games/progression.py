@@ -1,33 +1,25 @@
 from random import randint
 
-from random import randint
+import random
 
-GAME_RULE = 'What number is missing in the progression?'
-MIN_PROGRESSION_LENGTH = 5
-MAX_PROGRESSION_LENGTH = 11
-MIN_START = 1
-MAX_START = 20
-MIN_STEP = 2
-MAX_STEP = 6
 
-def get_question_and_answer() -> tuple[str, str]:
-    length = randint(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH)
-    start = randint(MIN_START, MAX_START)
-    step = randint(MIN_STEP, MAX_STEP)
-    progression = generate_progression(start, step, length)
-    hide_char_index = randint(0, len(progression) - 1)
-    question, right_answer = hide_element_in_progression(progression, 
-hide_char_index)
-    return question, right_answer
- 
-generate_progression(start: int, step: int, length: int) -> list[int]:
-    stop = start + (length * step)
-    progression = list(range(start, stop, step))
+DESCRIPTION = 'What number is missing in the progression?'
+SIZE_PROGRESSION = 10
+
+
+def generate_progression():
+    start = random.randint(1, 100)
+    rule = random.randint(2, 5)
+    progression = [start]
+    for i in range(SIZE_PROGRESSION):
+        progression.append(progression[i] + rule)
     return progression
 
-def hide_element_in_progression(progression: list[int]) -> tuple[str, str]:
-    right_answer = str(progression[hide_char_index])
-    progression[hide_char_index] = '..'
-    question = " ".join(map(str, progression))
-    return question, right_answer
 
+def generate_round_data():
+    progression = generate_progression()
+    random_index = random.randint(0, SIZE_PROGRESSION - 1)
+    right = progression[random_index]
+    progression[random_index] = '..'
+    question = list(map(str, progression))
+    return ' '.join(question), str(right)
