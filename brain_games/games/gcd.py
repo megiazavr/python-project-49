@@ -7,5 +7,5 @@ def generate_round_data():
     value1 = random.randint(1, 10)
     value2 = random.randint(1, 10)
     question = f'Question: {value1} {value2}'
-    right = value % 2 and 'no' or 'yes'
+    correct_answer = str(math.gcd(value1, value2))
     return question, right
