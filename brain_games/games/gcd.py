@@ -8,4 +8,4 @@ def generate_round_data():
     value2 = random.randint(1, 100)
     question = f'Question: {value1} {value2}'
     correct_answer = str(math.gcd(value1, value2))
-    return question, right
+    return question, correct_answer
