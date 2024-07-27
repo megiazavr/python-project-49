@@ -1,7 +1,7 @@
 import random
 import math
 
-game_rule = 'Find the greatest common divisor of given numbers.'
+DESCRIPTION  = 'Find the greatest common divisor of given numbers.'
 
 def generate_round_data():
     value = random.randint(1, 10)
