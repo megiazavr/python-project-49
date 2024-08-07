@@ -3,7 +3,10 @@ import random
 
 DESCRIPTION = 'What number is missing in the progression?'
 SIZE_PROGRESSION = 10
-
+MIN_START = 1
+MAX_START = 100
+MIN_STEP = 2
+MAX_STEP = 5
 
 def generate_progression():
     start = random.randint(1, 100)
