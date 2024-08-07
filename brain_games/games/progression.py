@@ -8,6 +8,7 @@ MAX_START = 100
 MIN_STEP = 2
 MAX_STEP = 5
 
+
 def generate_progression():
     start = random.randint(1, 100)
     rule = random.randint(2, 5)
