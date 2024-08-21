@@ -33,10 +33,9 @@ Brain Games — первый проект на курсе Hexlet: Python-раз�
 [Посмотреть запись на asciinema](https://asciinema.org/a/SkjKwy1vT8uMOuEzHr9jZizDT)
 
 ### Игра: brain-even
+(https://asciinema.org/a/VHzgEOg9RZP3OWMxA23pOMZjW)
 ### Игра: brain-calc
-<asciinema-player 
-src="https://asciinema.org/a/3STUm6BwDsl7AiGo5t9jZefWL"><img 
-src=="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
+https://asciinema.org/a/2hzzSfKCH9d3LvlbqtFNUms7a
 
 ### Игра: brain-gcd
 <asciinema-player 
