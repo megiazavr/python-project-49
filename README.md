@@ -38,16 +38,8 @@ Brain Games — первый проект на курсе Hexlet: Python-раз�
 https://asciinema.org/a/2hzzSfKCH9d3LvlbqtFNUms7a
 
 ### Игра: brain-gcd
-<asciinema-player 
-src="https://asciinema.org/a/BEVT0x9oBZYHJtHqmhFi8v8P6"><img 
-src=="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
-
+https://asciinema.org/a/0TyXdikZ0r1VoAPgzlG1nZ6K6
 ### Игра: brain-progression
-<asciinema-player 
-src="https://asciinema.org/a/NH1vk3i0N85iA4KiJRD3Zn2i2"><img 
-src=="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
-
+https://asciinema.org/a/Nu4GZW0GcRdrqgKWL80wQTVfN
 ### Игра: brain-prime
-<asciinema-player 
-src="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"><img 
-src="https://asciinema.org/a/BSkcby6bHNofiMEsqzcNln0JN"
+https://asciinema.org/a/O7ZN3a0vLPw4RHhFZ3i5aI2Gu
